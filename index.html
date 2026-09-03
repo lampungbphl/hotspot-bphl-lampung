@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Monitor Hotspot BPHL Lampung</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/topojson-client@3"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
@@ -248,7 +249,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Cache-busting: tambahkan parameter unik di tiap load halaman supaya
-// browser & CDN GitHub Pages tidak menampilkan data/stats.json versi lama dari cache.
+// browser & CDN GitHub Pages tidak menampilkan data versi lama dari cache.
 const CACHE_BUST = Date.now();
 function cb(path) { return `${path}?v=${CACHE_BUST}`; }
 
@@ -263,8 +264,16 @@ function boundaryStyle(color){
   return { color: color, weight: 1.4, fillColor: color, fillOpacity: 0.06, dashArray: null };
 }
 
+// Helper: ambil TopoJSON, convert ke GeoJSON FeatureCollection (ambil object pertama otomatis)
+function fetchTopoAsGeoJSON(path){
+  return fetch(cb(path)).then(r => r.json()).then(topo => {
+    const objName = Object.keys(topo.objects)[0];
+    return topojson.feature(topo, topo.objects[objName]);
+  });
+}
+
 // ---- Batas KPH ----
-fetch(cb('data/batas_kph.geojson')).then(r => r.json()).then(gj => {
+fetchTopoAsGeoJSON('data/batas_kph.topojson').then(gj => {
   L.geoJSON(gj, {
     style: boundaryStyle('#4f7a63'),
     onEachFeature: (f, layer) => {
@@ -272,10 +281,10 @@ fetch(cb('data/batas_kph.geojson')).then(r => r.json()).then(gj => {
       layer.bindPopup(`<b>KPH</b><br>${nama}`);
     }
   }).addTo(layerGroups.kph);
-}).catch(e => console.error('gagal load batas_kph.geojson', e));
+}).catch(e => console.error('gagal load batas_kph.topojson', e));
 
 // ---- Batas PBPH ----
-fetch(cb('data/batas_pbph.geojson')).then(r => r.json()).then(gj => {
+fetchTopoAsGeoJSON('data/batas_pbph.topojson').then(gj => {
   L.geoJSON(gj, {
     style: boundaryStyle('#8a5a2b'),
     onEachFeature: (f, layer) => {
@@ -283,7 +292,7 @@ fetch(cb('data/batas_pbph.geojson')).then(r => r.json()).then(gj => {
       layer.bindPopup(`<b>PBPH</b><br>${nama}`);
     }
   }).addTo(layerGroups.pbph);
-}).catch(e => console.error('gagal load batas_pbph.geojson', e));
+}).catch(e => console.error('gagal load batas_pbph.topojson', e));
 
 // ---- Fungsi kawasan hutan ----
 const FUNGSI_LABEL = {
@@ -292,7 +301,7 @@ const FUNGSI_LABEL = {
   TWA: 'Taman Wisata Alam', CA: 'Cagar Alam', CAL: 'Cagar Alam Laut',
   SM: 'Suaka Margasatwa', TB: 'Taman Buru', TAHURA: 'Taman Hutan Raya',
 };
-fetch(cb('data/kawasan_fungsi_hutan.geojson')).then(r => r.json()).then(gj => {
+fetchTopoAsGeoJSON('data/kawasan_fungsi_hutan.topojson').then(gj => {
   L.geoJSON(gj, {
     style: boundaryStyle('#7a6a9c'),
     onEachFeature: (f, layer) => {
@@ -300,7 +309,7 @@ fetch(cb('data/kawasan_fungsi_hutan.geojson')).then(r => r.json()).then(gj => {
       layer.bindPopup(`<b>Fungsi Kawasan</b><br>${FUNGSI_LABEL[kode] || kode}`);
     }
   }).addTo(layerGroups.fungsi);
-}).catch(e => console.error('gagal load kawasan_fungsi_hutan.geojson', e));
+}).catch(e => console.error('gagal load kawasan_fungsi_hutan.topojson', e));
 
 // ---- Hotspot ----
 function warnaConfidence(conf){
