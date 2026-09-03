@@ -1,28 +1,33 @@
 {
-  "last_updated": "2026-09-03T10:15:24.100935+00:00",
-  "total_hotspot": 115,
+  "last_updated": "2026-09-03T10:30:30.873343+00:00",
+  "total_hotspot": 215,
   "per_kph": {
-    "Luar KPH": 106,
-    "KPHL Kaur": 4,
-    "KPH Bukit Punggur": 3,
+    "Luar KPH": 195,
+    "KPH Bukit Punggur": 7,
+    "KPHL Kaur": 5,
+    "KPH Gunung Raja Basa - Way Pisang - Batu Serampok": 3,
     "KPHL Bengkulu Selatan": 1,
-    "KPH Gunung Balak": 1
+    "KPH Gunung Balak": 1,
+    "KPH Way Terusan": 1,
+    "KPH Sungai Buaya": 1,
+    "KPHL Bukit Daun": 1
   },
   "per_pbph": {
-    "Luar PBPH": 112,
-    "PT Inhutani Lampung": 3
+    "Luar PBPH": 207,
+    "PT Inhutani Lampung": 7,
+    "PT Silva Inhutani Lampung": 1
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 93,
+    "Areal Penggunaan Lain": 180,
+    "Hutan Produksi Tetap": 12,
     "Taman Wisata Alam": 6,
-    "Cagar Alam": 4,
-    "Hutan Lindung": 3,
-    "Hutan Produksi Terbatas": 3,
-    "Hutan Produksi Tetap": 3,
-    "Taman Nasional": 3
+    "Taman Nasional": 5,
+    "Hutan Lindung": 4,
+    "Hutan Produksi Terbatas": 4,
+    "Cagar Alam": 4
   },
   "per_confidence": {
-    "medium": 106,
-    "high": 9
+    "medium": 204,
+    "high": 11
   }
 }
