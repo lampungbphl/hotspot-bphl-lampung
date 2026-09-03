@@ -23,6 +23,7 @@ import requests
 import urllib3.util.connection as urllib3_cn
 from shapely.geometry import shape, Point
 from shapely.prepared import prep
+from shapely.validation import make_valid
 
 # ------------------------------------------------------------------
 # Fix untuk error umum di GitHub Actions runner: "Network is unreachable"
@@ -154,20 +155,61 @@ def fetch_all_hotspots() -> tuple[list[dict], list[str]]:
 
 
 # ------------------------------------------------------------------
-# Boundary loader + spatial join
+# Decoder TopoJSON (minimal, tanpa dependency tambahan)
 # ------------------------------------------------------------------
 
-def load_boundary(filename: str, name_field_candidates: list[str]) -> list[tuple]:
-    """Kembalikan list of (nama, prepared_geom, geom) dari sebuah file GeoJSON boundary."""
+def _decode_arc(arc, scale, translate):
+    """Decode satu arc TopoJSON (delta-encoded & terkuantisasi) jadi list [lon, lat]."""
+    x, y = 0, 0
+    pts = []
+    for dx, dy in arc:
+        x += dx
+        y += dy
+        pts.append([translate[0] + scale[0] * x, translate[1] + scale[1] * y])
+    return pts
+
+
+def _arc_coords(idx, arcs_decoded):
+    # index negatif (~i) berarti arc dipakai terbalik (lihat spesifikasi TopoJSON)
+    return arcs_decoded[idx] if idx >= 0 else list(reversed(arcs_decoded[~idx]))
+
+
+def _ring_coords(arc_indices, arcs_decoded):
+    coords = []
+    for i in arc_indices:
+        seg = _arc_coords(i, arcs_decoded)
+        if coords and coords[-1] == seg[0]:
+            coords.extend(seg[1:])
+        else:
+            coords.extend(seg)
+    return coords
+
+
+def load_boundary_topojson(filename: str, name_field_candidates: list[str]) -> list[tuple]:
+    """Baca file TopoJSON boundary, decode ke geometri, kembalikan list of
+    (nama, prepared_geom, geom). Geometri yang invalid otomatis diperbaiki."""
     path = os.path.join(DATA_DIR, filename)
     with open(path, encoding="utf-8") as f:
-        fc = json.load(f)
+        topo = json.load(f)
+
+    scale = topo["transform"]["scale"]
+    translate = topo["transform"]["translate"]
+    arcs_decoded = [_decode_arc(a, scale, translate) for a in topo["arcs"]]
+
+    object_name = next(iter(topo["objects"]))
+    obj = topo["objects"][object_name]
 
     result = []
-    for feat in fc["features"]:
-        if feat.get("geometry") is None:
-            continue
-        props = feat.get("properties", {})
+    for geom in obj["geometries"]:
+        t = geom.get("type")
+        props = geom.get("properties", {})
+        if t == "Polygon":
+            coords = [_ring_coords(ring, arcs_decoded) for ring in geom["arcs"]]
+        elif t == "MultiPolygon":
+            coords = [[_ring_coords(ring, arcs_decoded) for ring in poly] for poly in geom["arcs"]]
+        else:
+            continue  # geometry null/kosong dari sumber, lewati
+
         name = None
         for field in name_field_candidates:
             if props.get(field):
@@ -175,8 +217,11 @@ def load_boundary(filename: str, name_field_candidates: list[str]) -> list[tuple
                 break
         if name is None:
             name = "(tanpa nama)"
-        geom = shape(feat["geometry"])
-        result.append((name, prep(geom), geom))
+
+        g = shape({"type": t, "coordinates": coords})
+        if not g.is_valid:
+            g = make_valid(g)
+        result.append((name, prep(g), g))
     return result
 
 
@@ -209,10 +254,10 @@ def main():
     print("=== Build dashboard data BPHL Lampung ===")
     print(f"Waktu run (UTC): {datetime.now(timezone.utc).isoformat()}")
 
-    print("\nMemuat boundary lokal ...")
-    kph_boundaries = load_boundary("batas_kph.geojson", ["ORGANISASI"])
-    pbph_boundaries = load_boundary("batas_pbph.geojson", ["NAMOBJ"])
-    fungsi_boundaries = load_boundary("kawasan_fungsi_hutan.geojson", ["F_KAW"])
+    print("\nMemuat boundary lokal (TopoJSON) ...")
+    kph_boundaries = load_boundary_topojson("batas_kph.topojson", ["ORGANISASI"])
+    pbph_boundaries = load_boundary_topojson("batas_pbph.topojson", ["NAMOBJ"])
+    fungsi_boundaries = load_boundary_topojson("kawasan_fungsi_hutan.topojson", ["F_KAW"])
     print(f"  KPH: {len(kph_boundaries)} poligon")
     print(f"  PBPH: {len(pbph_boundaries)} poligon")
     print(f"  Fungsi kawasan hutan: {len(fungsi_boundaries)} poligon")
