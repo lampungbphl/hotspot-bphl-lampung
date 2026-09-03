@@ -355,6 +355,12 @@ function warnaConfidence(conf){
   return '#999999';
 }
 
+function formatJamAkuisisi(acqTime){
+  if (!acqTime) return '-';
+  const t = String(acqTime).padStart(4, '0'); // "546" -> "0546"
+  return `${t.slice(0,2)}:${t.slice(2,4)}`;
+}
+
 fetch(cb('data/hotspots.geojson')).then(r => r.json()).then(gj => {
   const feats = gj.features || [];
 
@@ -372,13 +378,15 @@ fetch(cb('data/hotspots.geojson')).then(r => r.json()).then(gj => {
       fillOpacity: 0.85,
       weight: 1,
     });
+    const gmapsUrl = `https://www.google.com/maps?q=${lat},${lon}`;
     marker.bindPopup(`
       <b>Hotspot &mdash; confidence ${p.confidence}</b><br>
-      Tanggal: ${p.acq_date || '-'} ${p.acq_time || ''}<br>
+      Tanggal: ${p.acq_date || '-'} ${formatJamAkuisisi(p.acq_time)}<br>
       KPH: ${p.kph || '-'}<br>
       PBPH: ${p.pbph || '-'}<br>
       Fungsi Kawasan: ${p.fungsi_kawasan || '-'}<br>
-      Satelit: ${p.satellite || '-'}
+      Satelit: ${p.satellite || '-'}<br>
+      <a href="${gmapsUrl}" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;padding:5px 10px;background:var(--hutan-700);color:#fff;text-decoration:none;border-radius:4px;font-size:0.8rem;">Buka di Google Maps ↗</a>
     `);
     marker.addTo(layerGroups.hotspot);
   });
