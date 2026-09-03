@@ -272,6 +272,15 @@ function boundaryStyle(color){
   return { color: color, weight: 1.4, fillColor: color, fillOpacity: 0.06, dashArray: null };
 }
 
+// Pastikan titik hotspot selalu bisa diklik, tidak ketutup polygon boundary
+// (urutan render Leaflet mengikuti urutan layer ditambahkan/selesai dimuat,
+// jadi kita paksa hotspot selalu paling atas tiap kali ada layer lain yang dimuat).
+function bawaHotspotKeAtas(){
+  if (map.hasLayer(layerGroups.hotspot)) {
+    layerGroups.hotspot.eachLayer(l => { if (l.bringToFront) l.bringToFront(); });
+  }
+}
+
 // Helper: ambil TopoJSON, convert ke GeoJSON FeatureCollection (ambil object pertama otomatis)
 function fetchTopoAsGeoJSON(path){
   return fetch(cb(path)).then(r => r.json()).then(topo => {
@@ -289,6 +298,7 @@ fetchTopoAsGeoJSON('data/batas_kph.topojson').then(gj => {
       layer.bindPopup(`<b>KPH</b><br>${nama}`);
     }
   }).addTo(layerGroups.kph);
+  bawaHotspotKeAtas();
 }).catch(e => console.error('gagal load batas_kph.topojson', e));
 
 // ---- Batas PBPH ----
@@ -300,6 +310,7 @@ fetchTopoAsGeoJSON('data/batas_pbph.topojson').then(gj => {
       layer.bindPopup(`<b>PBPH</b><br>${nama}`);
     }
   }).addTo(layerGroups.pbph);
+  bawaHotspotKeAtas();
 }).catch(e => console.error('gagal load batas_pbph.topojson', e));
 
 // ---- Fungsi kawasan hutan ----
@@ -334,6 +345,7 @@ fetchTopoAsGeoJSON('data/kawasan_fungsi_hutan.topojson').then(gj => {
       layer.bindPopup(`<b>Fungsi Kawasan</b><br>${FUNGSI_LABEL[kode] || kode} (${kode})`);
     }
   }).addTo(layerGroups.fungsi);
+  bawaHotspotKeAtas();
 }).catch(e => console.error('gagal load kawasan_fungsi_hutan.topojson', e));
 
 // ---- Hotspot ----
@@ -370,6 +382,7 @@ fetch(cb('data/hotspots.geojson')).then(r => r.json()).then(gj => {
     `);
     marker.addTo(layerGroups.hotspot);
   });
+  bawaHotspotKeAtas();
 }).catch(e => {
   console.error('gagal load hotspots.geojson', e);
   document.getElementById('total-hotspot').textContent = '0';
@@ -406,16 +419,20 @@ fetch(cb('data/stats.json')).then(r => r.json()).then(stats => {
 });
 
 // ---- Toggle layer ----
-function bindToggle(checkboxId, group){
+function bindToggle(checkboxId, group, isBoundary){
   document.getElementById(checkboxId).addEventListener('change', (e) => {
-    if (e.target.checked) map.addLayer(group);
-    else map.removeLayer(group);
+    if (e.target.checked) {
+      map.addLayer(group);
+      if (isBoundary) bawaHotspotKeAtas();
+    } else {
+      map.removeLayer(group);
+    }
   });
 }
-bindToggle('toggle-hotspot', layerGroups.hotspot);
-bindToggle('toggle-kph', layerGroups.kph);
-bindToggle('toggle-pbph', layerGroups.pbph);
-bindToggle('toggle-fungsi', layerGroups.fungsi);
+bindToggle('toggle-hotspot', layerGroups.hotspot, false);
+bindToggle('toggle-kph', layerGroups.kph, true);
+bindToggle('toggle-pbph', layerGroups.pbph, true);
+bindToggle('toggle-fungsi', layerGroups.fungsi, true);
 </script>
 </body>
 </html>
