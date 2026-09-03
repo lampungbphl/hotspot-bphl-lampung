@@ -3,10 +3,11 @@ build_dashboard_data.py
 ------------------------
 Mengambil titik panas (hotspot) dari NASA FIRMS untuk wilayah kerja BPHL Lampung,
 melakukan spatial join ke 3 layer boundary lokal (KPH, PBPH, Fungsi Kawasan Hutan),
-lalu menyimpan hasilnya sebagai data/hotspots.geojson & data/stats.json.
+memfilter hanya titik yang berada di Provinsi Lampung/Bengkulu, lalu menyimpan
+hasilnya sebagai data/hotspots.geojson & data/stats.json.
 
 Tidak ada dependensi ke database eksternal (Supabase dsb) - semua boundary
-dibaca langsung dari file GeoJSON di folder data/.
+dibaca langsung dari file TopoJSON di folder data/.
 """
 
 import csv
@@ -47,7 +48,9 @@ print(f"[debug] FIRMS_API_KEY terbaca, panjang: {len(FIRMS_API_KEY)} karakter "
       f"(awal: {FIRMS_API_KEY[:4]}***)")
 
 # Bbox gabungan wilayah kerja BPHL Lampung: Lampung + Bengkulu + sebagian
-# Sumsel/Jambi, mengikuti cakupan batas_kph.geojson & kawasan_fungsi_hutan.geojson
+# Sumsel/Jambi, mengikuti cakupan batas_kph.topojson & kawasan_fungsi_hutan.topojson.
+# Titik di luar Provinsi Lampung/Bengkulu tetap akan difilter lagi di bawah
+# (bbox cuma untuk membatasi area query ke FIRMS, bukan filter final).
 # format FIRMS: west,south,east,north
 BBOX = "100.9,-6.3,106.4,-2.2"
 
@@ -258,9 +261,12 @@ def main():
     kph_boundaries = load_boundary_topojson("batas_kph.topojson", ["ORGANISASI"])
     pbph_boundaries = load_boundary_topojson("batas_pbph.topojson", ["NAMOBJ"])
     fungsi_boundaries = load_boundary_topojson("kawasan_fungsi_hutan.topojson", ["F_KAW"])
+    provinsi_boundaries = load_boundary_topojson("wilayah_provinsi.topojson", ["WADMPR"])
     print(f"  KPH: {len(kph_boundaries)} poligon")
     print(f"  PBPH: {len(pbph_boundaries)} poligon")
     print(f"  Fungsi kawasan hutan: {len(fungsi_boundaries)} poligon")
+    print(f"  Wilayah provinsi (filter): {len(provinsi_boundaries)} poligon "
+          f"({', '.join(n for n, _, _ in provinsi_boundaries)})")
 
     print("\nMengambil hotspot dari NASA FIRMS ...")
     hotspots_raw, gagal_sources = fetch_all_hotspots()
@@ -280,6 +286,7 @@ def main():
     stat_per_pbph = Counter()
     stat_per_fungsi = Counter()
     stat_per_confidence = Counter()
+    dibuang_luar_provinsi = 0
 
     for row in hotspots_raw:
         try:
@@ -288,6 +295,12 @@ def main():
         except (KeyError, ValueError):
             continue
         pt = Point(lon, lat)
+
+        # Filter: hanya titik yang berada di Provinsi Lampung atau Bengkulu
+        provinsi_name = find_containing(pt, provinsi_boundaries)
+        if provinsi_name is None:
+            dibuang_luar_provinsi += 1
+            continue
 
         kph_name = find_containing(pt, kph_boundaries)
         pbph_name = find_containing(pt, pbph_boundaries)
@@ -312,6 +325,7 @@ def main():
             "confidence": conf_label,
             "frp": row.get("frp"),
             "daynight": row.get("daynight"),
+            "provinsi": provinsi_name,
             "kph": kph_name or "Luar KPH",
             "pbph": pbph_name or "Luar PBPH",
             "fungsi_kawasan": fungsi_label or "Tidak Diketahui",
@@ -331,7 +345,8 @@ def main():
     out_path = os.path.join(DATA_DIR, "hotspots.geojson")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(hotspots_fc, f, ensure_ascii=False)
-    print(f"\nDitulis: {out_path} ({len(features)} titik)")
+    print(f"\nDitulis: {out_path} ({len(features)} titik, {dibuang_luar_provinsi} titik "
+          f"dibuang karena di luar Lampung/Bengkulu)")
 
     stats = {
         "last_updated": datetime.now(timezone.utc).isoformat(),
