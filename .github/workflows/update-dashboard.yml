@@ -1,0 +1,42 @@
+name: Update Hotspot Dashboard
+
+on:
+  schedule:
+    # 01:00 UTC = 08:00 WIB / 08:00 WITA-1 (sesuaikan kalau perlu)
+    - cron: "0 1 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Jalankan build_dashboard_data.py
+        env:
+          FIRMS_API_KEY: ${{ secrets.FIRMS_API_KEY }}
+        run: python scripts/build_dashboard_data.py
+
+      - name: Commit & push perubahan data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/hotspots.geojson data/stats.json
+          if git diff --cached --quiet; then
+            echo "Tidak ada perubahan data."
+          else
+            git commit -m "chore: update data hotspot $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
