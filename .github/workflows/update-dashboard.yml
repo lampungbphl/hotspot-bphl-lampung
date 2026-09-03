@@ -3,7 +3,7 @@ name: Update Hotspot Dashboard
 on:
   schedule:
     # 01:00 UTC = 08:00 WIB / 08:00 WITA-1 (sesuaikan kalau perlu)
-    - cron: "0 1 * * *"
+    - cron: "*/12 * * * *"
   workflow_dispatch: {}
 
 permissions:
