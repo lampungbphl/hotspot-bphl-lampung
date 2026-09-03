@@ -1,22 +1,21 @@
 {
-  "last_updated": "2026-09-03T08:19:25.958507+00:00",
-  "total_hotspot": 153,
+  "last_updated": "2026-09-03T08:35:36.550139+00:00",
+  "total_hotspot": 31,
   "per_kph": {
-    "Luar KPH": 152,
+    "Luar KPH": 30,
     "KPH Gunung Balak": 1
   },
   "per_pbph": {
-    "Luar PBPH": 153
+    "Luar PBPH": 31
   },
   "per_fungsi_kawasan": {
-    "Tidak Diketahui": 122,
     "Areal Penggunaan Lain": 24,
     "Cagar Alam": 4,
     "Taman Wisata Alam": 2,
     "Hutan Lindung": 1
   },
   "per_confidence": {
-    "medium": 127,
-    "high": 26
+    "medium": 28,
+    "high": 3
   }
 }
