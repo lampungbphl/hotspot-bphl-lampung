@@ -211,10 +211,15 @@
       <div class="card">
         <h2>Layer Peta</h2>
         <div class="layer-toggle">
-          <label><input type="checkbox" id="toggle-hotspot" checked> <span class="swatch" style="background:var(--api-tinggi)"></span> Titik Hotspot</label>
-          <label><input type="checkbox" id="toggle-kph" checked> <span class="swatch" style="background:transparent;border:2px solid var(--kph-line)"></span> Batas KPH</label>
-          <label><input type="checkbox" id="toggle-pbph"> <span class="swatch" style="background:transparent;border:2px solid var(--pbph-line)"></span> Batas PBPH</label>
           <label><input type="checkbox" id="toggle-fungsi"> <span class="swatch" style="background:transparent;border:2px solid var(--fungsi-line)"></span> Fungsi Kawasan Hutan</label>
+        </div>
+        <div class="legend-box" style="margin-top:10px;">
+          <div style="display:flex;align-items:center;gap:6px;"><span class="swatch" style="background:#02AD00"></span> HL — Hutan Lindung</div>
+          <div style="display:flex;align-items:center;gap:6px;"><span class="swatch" style="background:#8AF200"></span> HPT — Hutan Produksi Terbatas</div>
+          <div style="display:flex;align-items:center;gap:6px;"><span class="swatch" style="background:#FFFF00"></span> HP — Hutan Produksi Tetap</div>
+          <div style="display:flex;align-items:center;gap:6px;"><span class="swatch" style="background:#FF5EFF"></span> HPK — Hutan Produksi Konversi</div>
+          <div style="display:flex;align-items:center;gap:6px;"><span class="swatch" style="background:#AD3FFF"></span> TN/TWA/TB/SM/CA/Tahura</div>
+          <div style="display:flex;align-items:center;gap:6px;"><span class="swatch" style="background:#FFFFFF;border:1px solid var(--garis)"></span> APL — Areal Penggunaan Lain</div>
         </div>
       </div>
 
@@ -301,12 +306,29 @@ const FUNGSI_LABEL = {
   TWA: 'Taman Wisata Alam', CA: 'Cagar Alam', CAL: 'Cagar Alam Laut',
   SM: 'Suaka Margasatwa', TB: 'Taman Buru', TAHURA: 'Taman Hutan Raya',
 };
+// Warna resmi sesuai legenda kawasan hutan (RGB dari tabel simbol).
+// APL belum ada kode RGB resmi di legenda yang diberikan - sementara pakai putih.
+const FUNGSI_COLORS = {
+  HL: '#02AD00',    // Hutan Lindung
+  HPT: '#8AF200',   // Hutan Produksi Terbatas
+  HP: '#FFFF00',    // Hutan Produksi Tetap
+  HPK: '#FF5EFF',   // Hutan Produksi Konversi
+  APL: '#FFFFFF',   // Areal Penggunaan Lain (asumsi sementara)
+  // Kawasan Suaka Alam & Pelestarian Alam - semua kode ini satu warna ungu
+  TN: '#AD3FFF', TWA: '#AD3FFF', TB: '#AD3FFF', SM: '#AD3FFF', CA: '#AD3FFF',
+  CAL: '#AD3FFF', TAHURA: '#AD3FFF',
+};
+const FUNGSI_DEFAULT_COLOR = '#999999';
+
 fetchTopoAsGeoJSON('data/kawasan_fungsi_hutan.topojson').then(gj => {
   L.geoJSON(gj, {
-    style: boundaryStyle('#7a6a9c'),
+    style: (f) => {
+      const warna = FUNGSI_COLORS[f.properties.F_KAW] || FUNGSI_DEFAULT_COLOR;
+      return { color: warna, weight: 1, fillColor: warna, fillOpacity: 0.55 };
+    },
     onEachFeature: (f, layer) => {
       const kode = f.properties.F_KAW;
-      layer.bindPopup(`<b>Fungsi Kawasan</b><br>${FUNGSI_LABEL[kode] || kode}`);
+      layer.bindPopup(`<b>Fungsi Kawasan</b><br>${FUNGSI_LABEL[kode] || kode} (${kode})`);
     }
   }).addTo(layerGroups.fungsi);
 }).catch(e => console.error('gagal load kawasan_fungsi_hutan.topojson', e));
