@@ -1,8 +1,23 @@
 {
-  "last_updated": "2026-09-04T08:00:34.858812+00:00",
-  "total_hotspot": 0,
-  "per_kph": {},
-  "per_pbph": {},
-  "per_fungsi_kawasan": {},
-  "per_confidence": {}
+  "last_updated": "2026-09-04T08:15:23.417998+00:00",
+  "total_hotspot": 44,
+  "per_kph": {
+    "Luar KPH": 40,
+    "KPH Bukit Punggur": 3,
+    "KPHP Bengkulu Utara": 1
+  },
+  "per_pbph": {
+    "Luar PBPH": 41,
+    "PT Inhutani Lampung": 3
+  },
+  "per_fungsi_kawasan": {
+    "Areal Penggunaan Lain": 37,
+    "Hutan Produksi Tetap": 3,
+    "Taman Wisata Alam": 2,
+    "Taman Nasional": 1,
+    "Hutan Produksi Konversi": 1
+  },
+  "per_confidence": {
+    "medium": 44
+  }
 }
