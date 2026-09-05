@@ -1,34 +1,34 @@
 {
-  "last_updated": "2026-09-05T09:10:45.822450+00:00",
-  "total_hotspot": 142,
+  "last_updated": "2026-09-05T09:15:26.453113+00:00",
+  "total_hotspot": 247,
   "per_kph": {
-    "Luar KPH": 112,
-    "KPH Bukit Punggur": 9,
-    "KPHL Bukit Balai Rejang": 5,
-    "KPH Sungai Buaya": 5,
+    "Luar KPH": 200,
+    "KPH Bukit Punggur": 14,
+    "KPHL Bukit Balai Rejang": 9,
+    "KPH Sungai Buaya": 8,
+    "KPHL Kaur": 5,
+    "KPH Way Terusan": 4,
     "KPH Gunung Balak": 3,
-    "KPHL Kaur": 3,
-    "KPH Way Terusan": 2,
-    "KPHL Seluma": 2,
-    "KPHP Muko Muko": 1
+    "KPHP Muko Muko": 2,
+    "KPHL Seluma": 2
   },
   "per_pbph": {
-    "Luar PBPH": 127,
-    "PT Inhutani Lampung": 9,
-    "PT Silva Inhutani Lampung": 5,
+    "Luar PBPH": 225,
+    "PT Inhutani Lampung": 13,
+    "PT Silva Inhutani Lampung": 8,
     "PT BAT": 1
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 100,
-    "Hutan Produksi Tetap": 15,
-    "Hutan Lindung": 12,
-    "Taman Wisata Alam": 8,
-    "Hutan Produksi Terbatas": 3,
-    "Taman Nasional": 3,
+    "Areal Penggunaan Lain": 178,
+    "Hutan Produksi Tetap": 24,
+    "Hutan Lindung": 19,
+    "Taman Wisata Alam": 13,
+    "Taman Nasional": 8,
+    "Hutan Produksi Terbatas": 4,
     "Taman Buru": 1
   },
   "per_confidence": {
-    "medium": 129,
+    "medium": 234,
     "high": 13
   }
 }
