@@ -1,8 +1,18 @@
 {
-  "last_updated": "2026-09-06T07:12:41.877020+00:00",
-  "total_hotspot": 0,
-  "per_kph": {},
-  "per_pbph": {},
-  "per_fungsi_kawasan": {},
-  "per_confidence": {}
+  "last_updated": "2026-09-06T07:30:36.143637+00:00",
+  "total_hotspot": 5,
+  "per_kph": {
+    "Luar KPH": 5
+  },
+  "per_pbph": {
+    "Luar PBPH": 5
+  },
+  "per_fungsi_kawasan": {
+    "Areal Penggunaan Lain": 3,
+    "Cagar Alam": 2
+  },
+  "per_confidence": {
+    "high": 2,
+    "medium": 3
+  }
 }
