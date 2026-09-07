@@ -54,9 +54,9 @@ print(f"[debug] FIRMS_API_KEY terbaca, panjang: {len(FIRMS_API_KEY)} karakter "
 # format FIRMS: west,south,east,north
 BBOX = "100.9,-6.3,106.4,-2.2"
 
-# Sumber VIIRS NRT (resolusi lebih baik dari MODIS untuk titik kecil).
-# Bisa ditambah "MODIS_NRT" kalau mau ikutkan juga.
-SOURCES = ["VIIRS_SNPP_NRT", "VIIRS_NOAA20_NRT", "VIIRS_NOAA21_NRT"]
+# Sumber VIIRS NRT (resolusi lebih baik dari MODIS untuk titik kecil), plus
+# MODIS NRT (Aqua & Terra) supaya titik yang cuma terdeteksi MODIS tidak terlewat.
+SOURCES = ["VIIRS_SNPP_NRT", "VIIRS_NOAA20_NRT", "VIIRS_NOAA21_NRT", "MODIS_NRT"]
 
 # Berapa hari ke belakang yang diambil tiap run (FIRMS NRT: maksimal 10 hari per request)
 DAY_RANGE = 1
