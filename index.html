@@ -6,6 +6,7 @@
 <title>Monitor Hotspot BPHL Lampung</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/topojson-client@3"></script>
+<script src="https://unpkg.com/@mapbox/shp-write@latest/shpwrite.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
@@ -206,6 +207,9 @@
           <span><span class="dot" style="background:var(--api-tinggi)"></span>Tinggi: <b id="conf-high">0</b></span>
           <span><span class="dot" style="background:var(--api-sedang)"></span>Sedang: <b id="conf-medium">0</b></span>
         </div>
+        <button id="btn-download-shp" style="margin-top:12px;width:100%;padding:8px;background:var(--hutan-700);color:#fff;border:none;border-radius:4px;font-size:0.8rem;font-weight:600;cursor:pointer;">
+          ⬇ Download Titik Hotspot (SHP)
+        </button>
       </div>
 
       <div class="card">
@@ -257,7 +261,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Cache-busting: tambahkan parameter unik di tiap load halaman supaya
-// browser & CDN GitHub Pages tidak menampilkan data versi lama dari cache.
+// browser & CDN GitHub Pages tidak menampilkan data/stats.json versi lama dari cache.
 const CACHE_BUST = Date.now();
 function cb(path) { return `${path}?v=${CACHE_BUST}`; }
 
@@ -361,8 +365,11 @@ function formatJamAkuisisi(acqTime){
   return `${t.slice(0,2)}:${t.slice(2,4)}`;
 }
 
+let hotspotGeoJSON = null; // disimpan untuk keperluan download SHP
+
 fetch(cb('data/hotspots.geojson')).then(r => r.json()).then(gj => {
   const feats = gj.features || [];
+  hotspotGeoJSON = gj;
 
   document.getElementById('total-hotspot').textContent = feats.length;
   document.getElementById('conf-high').textContent = feats.filter(f => f.properties.confidence === 'high').length;
@@ -441,6 +448,48 @@ bindToggle('toggle-hotspot', layerGroups.hotspot, false);
 bindToggle('toggle-kph', layerGroups.kph, true);
 bindToggle('toggle-pbph', layerGroups.pbph, true);
 bindToggle('toggle-fungsi', layerGroups.fungsi, true);
+
+// ---- Download SHP ----
+document.getElementById('btn-download-shp').addEventListener('click', () => {
+  if (!hotspotGeoJSON || !hotspotGeoJSON.features || hotspotGeoJSON.features.length === 0) {
+    alert('Belum ada data hotspot untuk di-download.');
+    return;
+  }
+
+  // Susun ulang atribut supaya PERSIS sama dengan yang tampil di popup peta,
+  // dan nama field dibuat <=10 karakter (batas standar format DBF/shapefile).
+  const geojsonUntukSHP = {
+    type: 'FeatureCollection',
+    features: hotspotGeoJSON.features.map(f => {
+      const p = f.properties;
+      return {
+        type: 'Feature',
+        geometry: f.geometry,
+        properties: {
+          tanggal: p.acq_date || '-',
+          jam: formatJamAkuisisi(p.acq_time),
+          confidence: p.confidence || '-',
+          kph: p.kph || '-',
+          pbph: p.pbph || '-',
+          fungsi: p.fungsi_kawasan || '-',   // fungsi_kawasan -> disingkat, >10 karakter tidak valid utk DBF
+          provinsi: p.provinsi || '-',
+          satelit: p.satellite || '-',
+          frp: p.frp || '-',
+          lat: f.geometry.coordinates[1],
+          lon: f.geometry.coordinates[0],
+        },
+      };
+    }),
+  };
+
+  const tanggal = new Date().toISOString().slice(0,10);
+  shpwrite.download(geojsonUntukSHP, {
+    folder: `hotspot_bphl_lampung_${tanggal}`,
+    filename: `hotspot_bphl_lampung_${tanggal}`,
+    outputType: 'blob',
+    types: { point: 'hotspot' },
+  });
+});
 </script>
 </body>
 </html>
