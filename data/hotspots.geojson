@@ -1,1 +1,1 @@
-{"type": "FeatureCollection", "features": []}
+{"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [104.59055, -4.43252]}, "properties": {"acq_date": "2026-09-07", "acq_time": "156", "satellite": "Terra", "instrument": "MODIS", "confidence": "medium", "frp": "8.54", "daynight": "D", "provinsi": "Lampung", "kph": "KPH Bukit Punggur", "pbph": "PT Inhutani Lampung", "fungsi_kawasan": "Hutan Produksi Tetap"}}]}
