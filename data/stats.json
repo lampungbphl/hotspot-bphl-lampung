@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-09-08T21:16:28.464412+00:00",
-  "total_hotspot": 140,
+  "last_updated": "2026-09-08T21:45:05.899263+00:00",
+  "total_hotspot": 141,
   "per_kph": {
-    "Luar KPH": 101,
+    "Luar KPH": 102,
     "KPH Muara Dua": 15,
     "KPH Bukit Punggur": 9,
     "KPH Way Terusan": 7,
@@ -12,7 +12,7 @@
     "KPHP Bengkulu Utara": 1
   },
   "per_pbph": {
-    "Luar PBPH": 113,
+    "Luar PBPH": 114,
     "PT Inhutani Lampung": 23,
     "PT Silva Inhutani Lampung": 3,
     "PT ANUGERAH PRATAMA INSPIRASI": 1
@@ -20,12 +20,12 @@
   "per_fungsi_kawasan": {
     "Areal Penggunaan Lain": 86,
     "Hutan Produksi Tetap": 34,
-    "Cagar Alam": 15,
+    "Cagar Alam": 16,
     "Hutan Lindung": 4,
     "Hutan Produksi Terbatas": 1
   },
   "per_confidence": {
     "high": 6,
-    "medium": 134
+    "medium": 135
   }
 }
