@@ -1,27 +1,8 @@
 {
-  "last_updated": "2026-09-09T23:55:30.580621+00:00",
-  "total_hotspot": 138,
-  "per_kph": {
-    "Luar KPH": 126,
-    "KPH Muara Dua": 7,
-    "KPH Bukit Punggur": 3,
-    "KPHP Muko Muko": 2
-  },
-  "per_pbph": {
-    "Luar PBPH": 127,
-    "PT Inhutani Lampung": 10,
-    "PT BAT": 1
-  },
-  "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 98,
-    "Cagar Alam": 24,
-    "Hutan Produksi Tetap": 10,
-    "Taman Nasional": 3,
-    "Hutan Produksi Terbatas": 2,
-    "Cagar Alam Laut": 1
-  },
-  "per_confidence": {
-    "medium": 133,
-    "high": 5
-  }
+  "last_updated": "2026-09-10T00:00:36.520540+00:00",
+  "total_hotspot": 0,
+  "per_kph": {},
+  "per_pbph": {},
+  "per_fungsi_kawasan": {},
+  "per_confidence": {}
 }
