@@ -1,20 +1,23 @@
 {
-  "last_updated": "2026-09-11T08:51:00.075721+00:00",
-  "total_hotspot": 27,
+  "last_updated": "2026-09-11T09:00:45.597838+00:00",
+  "total_hotspot": 66,
   "per_kph": {
-    "Luar KPH": 26,
-    "KPH Way Terusan": 1
+    "Luar KPH": 62,
+    "KPH Way Terusan": 3,
+    "KPH Gunung Balak": 1
   },
   "per_pbph": {
-    "Luar PBPH": 27
+    "Luar PBPH": 65,
+    "PT Silva Inhutani Lampung": 1
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 15,
-    "Cagar Alam": 11,
-    "Hutan Produksi Tetap": 1
+    "Areal Penggunaan Lain": 43,
+    "Cagar Alam": 18,
+    "Hutan Produksi Tetap": 4,
+    "Hutan Lindung": 1
   },
   "per_confidence": {
-    "medium": 25,
+    "medium": 64,
     "high": 2
   }
 }
