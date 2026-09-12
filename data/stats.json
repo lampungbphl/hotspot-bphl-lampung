@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-09-12T09:15:31.482322+00:00",
-  "total_hotspot": 36,
+  "last_updated": "2026-09-12T09:30:34.894350+00:00",
+  "total_hotspot": 38,
   "per_kph": {
-    "Luar KPH": 34,
+    "Luar KPH": 36,
     "KPH Bukit Punggur": 2
   },
   "per_pbph": {
-    "Luar PBPH": 34,
+    "Luar PBPH": 36,
     "PT Inhutani Lampung": 2
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 34,
+    "Areal Penggunaan Lain": 36,
     "Hutan Produksi Tetap": 2
   },
   "per_confidence": {
-    "medium": 35,
+    "medium": 37,
     "high": 1
   }
 }
