@@ -1,29 +1,31 @@
 {
-  "last_updated": "2026-09-13T20:15:12.427720+00:00",
-  "total_hotspot": 155,
+  "last_updated": "2026-09-13T20:44:57.580376+00:00",
+  "total_hotspot": 172,
   "per_kph": {
-    "Luar KPH": 125,
-    "KPH Sungai Buaya": 20,
+    "Luar KPH": 140,
+    "KPH Sungai Buaya": 21,
     "KPHP Bengkulu Utara": 5,
     "KPHL Bukit Balai Rejang": 3,
+    "KPH Muara Dua": 1,
     "KPH Gunung Balak": 1,
     "KPHL Bengkulu Selatan": 1
   },
   "per_pbph": {
-    "Luar PBPH": 130,
-    "PT Silva Inhutani Lampung": 20,
-    "PT ANUGERAH PRATAMA INSPIRASI": 5
+    "Luar PBPH": 145,
+    "PT Silva Inhutani Lampung": 21,
+    "PT ANUGERAH PRATAMA INSPIRASI": 5,
+    "PT Inhutani Lampung": 1
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 117,
-    "Hutan Produksi Tetap": 20,
+    "Areal Penggunaan Lain": 126,
+    "Hutan Produksi Tetap": 22,
+    "Cagar Alam": 12,
     "Hutan Produksi Terbatas": 6,
-    "Cagar Alam": 6,
     "Hutan Lindung": 4,
     "Taman Nasional": 2
   },
   "per_confidence": {
-    "medium": 151,
+    "medium": 168,
     "high": 4
   }
 }
