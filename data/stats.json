@@ -1,8 +1,19 @@
 {
-  "last_updated": "2026-09-20T07:55:32.556151+00:00",
-  "total_hotspot": 0,
-  "per_kph": {},
-  "per_pbph": {},
-  "per_fungsi_kawasan": {},
-  "per_confidence": {}
+  "last_updated": "2026-09-20T08:12:36.598903+00:00",
+  "total_hotspot": 5,
+  "per_kph": {
+    "Luar KPH": 4,
+    "KPH Way Terusan": 1
+  },
+  "per_pbph": {
+    "Luar PBPH": 5
+  },
+  "per_fungsi_kawasan": {
+    "Cagar Alam": 2,
+    "Areal Penggunaan Lain": 2,
+    "Hutan Produksi Tetap": 1
+  },
+  "per_confidence": {
+    "medium": 5
+  }
 }
