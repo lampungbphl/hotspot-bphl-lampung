@@ -1,18 +1,19 @@
 {
-  "last_updated": "2026-09-22T08:45:28.510782+00:00",
-  "total_hotspot": 2,
+  "last_updated": "2026-09-22T08:49:31.314658+00:00",
+  "total_hotspot": 19,
   "per_kph": {
-    "Luar KPH": 1,
+    "Luar KPH": 18,
     "KPH Bukit Punggur": 1
   },
   "per_pbph": {
-    "Luar PBPH": 2
+    "Luar PBPH": 19
   },
   "per_fungsi_kawasan": {
-    "Taman Nasional": 1,
+    "Taman Nasional": 16,
+    "Areal Penggunaan Lain": 2,
     "Hutan Produksi Tetap": 1
   },
   "per_confidence": {
-    "medium": 2
+    "medium": 19
   }
 }
