@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-09-22T21:15:25.020202+00:00",
-  "total_hotspot": 29,
+  "last_updated": "2026-09-22T21:30:34.292852+00:00",
+  "total_hotspot": 30,
   "per_kph": {
-    "Luar KPH": 28,
+    "Luar KPH": 29,
     "KPH Bukit Punggur": 1
   },
   "per_pbph": {
-    "Luar PBPH": 29
+    "Luar PBPH": 30
   },
   "per_fungsi_kawasan": {
     "Taman Nasional": 17,
-    "Cagar Alam": 6,
+    "Cagar Alam": 7,
     "Areal Penggunaan Lain": 5,
     "Hutan Produksi Tetap": 1
   },
   "per_confidence": {
-    "medium": 29
+    "medium": 30
   }
 }
