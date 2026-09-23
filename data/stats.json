@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-09-23T09:00:38.917825+00:00",
-  "total_hotspot": 80,
+  "last_updated": "2026-09-23T09:11:40.546761+00:00",
+  "total_hotspot": 90,
   "per_kph": {
-    "Luar KPH": 73,
+    "Luar KPH": 83,
     "KPH Pesisir Barat": 3,
     "KPH Pematang Neba": 2,
     "KPHL Kaur": 1,
     "KPH Gunung Balak": 1
   },
   "per_pbph": {
-    "Luar PBPH": 80
+    "Luar PBPH": 90
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 58,
+    "Areal Penggunaan Lain": 67,
     "Taman Nasional": 8,
-    "Cagar Alam": 5,
+    "Cagar Alam": 6,
     "Hutan Lindung": 4,
     "Hutan Produksi Terbatas": 2,
     "Cagar Alam Laut": 1,
@@ -22,7 +22,7 @@
     "Taman Wisata Alam": 1
   },
   "per_confidence": {
-    "medium": 77,
+    "medium": 87,
     "high": 3
   }
 }
