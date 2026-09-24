@@ -1,8 +1,22 @@
 {
-  "last_updated": "2026-09-24T08:00:37.388640+00:00",
-  "total_hotspot": 0,
-  "per_kph": {},
-  "per_pbph": {},
-  "per_fungsi_kawasan": {},
-  "per_confidence": {}
+  "last_updated": "2026-09-24T08:13:16.012986+00:00",
+  "total_hotspot": 16,
+  "per_kph": {
+    "Luar KPH": 13,
+    "KPH Sungai Buaya": 2,
+    "KPH Way Terusan": 1
+  },
+  "per_pbph": {
+    "Luar PBPH": 14,
+    "PT Silva Inhutani Lampung": 2
+  },
+  "per_fungsi_kawasan": {
+    "Taman Nasional": 10,
+    "Areal Penggunaan Lain": 4,
+    "Hutan Produksi Tetap": 2
+  },
+  "per_confidence": {
+    "medium": 15,
+    "high": 1
+  }
 }
