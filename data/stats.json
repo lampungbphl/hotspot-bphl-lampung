@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-10-01T14:15:33.532007+00:00",
-  "total_hotspot": 421,
+  "last_updated": "2026-10-01T14:30:38.133750+00:00",
+  "total_hotspot": 425,
   "per_kph": {
-    "Luar KPH": 317,
+    "Luar KPH": 321,
     "KPH Sungai Buaya": 67,
     "KPH Bukit Punggur": 16,
     "KPH Way Terusan": 12,
@@ -14,12 +14,12 @@
     "KPH Gunung Raja Basa - Way Pisang - Batu Serampok": 1
   },
   "per_pbph": {
-    "Luar PBPH": 351,
+    "Luar PBPH": 355,
     "PT Silva Inhutani Lampung": 67,
     "PT Inhutani Lampung": 3
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 277,
+    "Areal Penggunaan Lain": 281,
     "Hutan Produksi Tetap": 99,
     "Taman Nasional": 33,
     "Cagar Alam": 7,
@@ -27,7 +27,7 @@
     "Taman Wisata Alam": 1
   },
   "per_confidence": {
-    "medium": 408,
-    "high": 13
+    "medium": 410,
+    "high": 15
   }
 }
