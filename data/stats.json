@@ -1,33 +1,8 @@
 {
-  "last_updated": "2026-10-01T23:58:35.964128+00:00",
-  "total_hotspot": 468,
-  "per_kph": {
-    "Luar KPH": 352,
-    "KPH Sungai Buaya": 70,
-    "KPH Bukit Punggur": 16,
-    "KPH Way Terusan": 12,
-    "KPH Muara Dua": 12,
-    "KPH Pematang Neba": 2,
-    "KPHL Kaur": 1,
-    "KPH Pesisir Barat": 1,
-    "KPHL Seluma": 1,
-    "KPH Gunung Raja Basa - Way Pisang - Batu Serampok": 1
-  },
-  "per_pbph": {
-    "Luar PBPH": 386,
-    "PT Silva Inhutani Lampung": 70,
-    "PT Inhutani Lampung": 12
-  },
-  "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 310,
-    "Hutan Produksi Tetap": 111,
-    "Taman Nasional": 35,
-    "Cagar Alam": 7,
-    "Hutan Lindung": 4,
-    "Taman Wisata Alam": 1
-  },
-  "per_confidence": {
-    "medium": 453,
-    "high": 15
-  }
+  "last_updated": "2026-10-02T00:00:42.802269+00:00",
+  "total_hotspot": 0,
+  "per_kph": {},
+  "per_pbph": {},
+  "per_fungsi_kawasan": {},
+  "per_confidence": {}
 }
