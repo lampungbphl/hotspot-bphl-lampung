@@ -1,33 +1,34 @@
 {
-  "last_updated": "2026-10-07T20:00:41.136982+00:00",
-  "total_hotspot": 179,
+  "last_updated": "2026-10-07T20:30:32.021117+00:00",
+  "total_hotspot": 225,
   "per_kph": {
-    "Luar KPH": 161,
+    "Luar KPH": 193,
+    "KPH Muara Dua": 11,
+    "KPHL Kaur": 5,
     "KPH Sungai Buaya": 5,
     "KPH Way Terusan": 4,
     "KPH Pematang Neba": 2,
-    "KPHL Kaur": 2,
     "KPH Gunung Balak": 2,
     "KPH Way Waya - Tangkit Tebak": 1,
     "KPHL Seluma": 1,
-    "KPH Muara Dua": 1
+    "KPH Bukit Punggur": 1
   },
   "per_pbph": {
-    "Luar PBPH": 173,
-    "PT Silva Inhutani Lampung": 5,
-    "PT BUDI LAMPUNG SEJAHTERA": 1
+    "Luar PBPH": 209,
+    "PT BUDI LAMPUNG SEJAHTERA": 11,
+    "PT Silva Inhutani Lampung": 5
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 147,
-    "Hutan Produksi Tetap": 10,
-    "Hutan Lindung": 7,
-    "Taman Nasional": 6,
+    "Areal Penggunaan Lain": 172,
+    "Hutan Produksi Tetap": 23,
+    "Taman Nasional": 9,
+    "Hutan Lindung": 8,
+    "Cagar Alam": 7,
     "Taman Wisata Alam": 5,
-    "Cagar Alam": 3,
     "Hutan Produksi Terbatas": 1
   },
   "per_confidence": {
-    "medium": 167,
+    "medium": 213,
     "high": 12
   }
 }
