@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-10-08T22:45:27.819511+00:00",
-  "total_hotspot": 425,
+  "last_updated": "2026-10-08T23:00:36.022010+00:00",
+  "total_hotspot": 426,
   "per_kph": {
     "Luar KPH": 348,
-    "KPH Muara Dua": 60,
+    "KPH Muara Dua": 61,
     "KPH Bukit Punggur": 11,
     "KPH Sungai Buaya": 3,
     "KPHL Bukit Balai Rejang": 2,
@@ -11,13 +11,13 @@
   },
   "per_pbph": {
     "Luar PBPH": 353,
-    "PT BUDI LAMPUNG SEJAHTERA": 44,
+    "PT BUDI LAMPUNG SEJAHTERA": 45,
     "PT Inhutani Lampung": 25,
     "PT Silva Inhutani Lampung": 3
   },
   "per_fungsi_kawasan": {
     "Areal Penggunaan Lain": 303,
-    "Hutan Produksi Tetap": 72,
+    "Hutan Produksi Tetap": 73,
     "Cagar Alam": 18,
     "Taman Nasional": 18,
     "Taman Wisata Alam": 9,
@@ -25,7 +25,7 @@
     "Hutan Produksi Terbatas": 1
   },
   "per_confidence": {
-    "medium": 401,
+    "medium": 402,
     "high": 24
   }
 }
