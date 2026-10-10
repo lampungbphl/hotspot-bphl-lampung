@@ -1,27 +1,29 @@
 {
-  "last_updated": "2026-10-10T12:15:25.304130+00:00",
-  "total_hotspot": 108,
+  "last_updated": "2026-10-10T12:30:31.973420+00:00",
+  "total_hotspot": 135,
   "per_kph": {
-    "Luar KPH": 93,
+    "Luar KPH": 118,
     "KPH Way Terusan": 6,
+    "KPHL Kaur": 4,
     "KPH Bukit Punggur": 3,
-    "KPHL Kaur": 3,
     "KPHL Seluma": 2,
+    "KPH Pesisir Barat": 1,
     "KPH Gunung Raja Basa - Way Pisang - Batu Serampok": 1
   },
   "per_pbph": {
-    "Luar PBPH": 106,
+    "Luar PBPH": 133,
     "PT Inhutani Lampung": 2
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 73,
-    "Taman Nasional": 20,
-    "Hutan Produksi Tetap": 10,
+    "Areal Penggunaan Lain": 92,
+    "Taman Nasional": 23,
+    "Hutan Produksi Tetap": 11,
     "Hutan Lindung": 4,
-    "Hutan Produksi Terbatas": 1
+    "Cagar Alam": 3,
+    "Hutan Produksi Terbatas": 2
   },
   "per_confidence": {
-    "medium": 105,
+    "medium": 132,
     "high": 3
   }
 }
