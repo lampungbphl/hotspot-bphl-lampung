@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-10-15T21:15:29.363598+00:00",
-  "total_hotspot": 326,
+  "last_updated": "2026-10-15T21:30:36.096589+00:00",
+  "total_hotspot": 349,
   "per_kph": {
-    "Luar KPH": 296,
+    "Luar KPH": 319,
     "KPH Way Terusan": 15,
     "KPH Pesawaran": 3,
     "KPH Muara Dua": 3,
@@ -14,21 +14,21 @@
     "KPHL Bukit Daun": 1
   },
   "per_pbph": {
-    "Luar PBPH": 321,
-    "PT Inhutani Lampung": 4,
+    "Luar PBPH": 343,
+    "PT Inhutani Lampung": 5,
     "PT ANUGERAH PRATAMA INSPIRASI": 1
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 237,
-    "Taman Nasional": 53,
-    "Hutan Produksi Tetap": 19,
+    "Areal Penggunaan Lain": 256,
+    "Taman Nasional": 54,
+    "Hutan Produksi Tetap": 20,
+    "Cagar Alam": 6,
     "Hutan Lindung": 6,
     "Hutan Produksi Terbatas": 5,
-    "Cagar Alam": 4,
     "Taman Wisata Alam": 2
   },
   "per_confidence": {
-    "medium": 293,
+    "medium": 316,
     "high": 33
   }
 }
