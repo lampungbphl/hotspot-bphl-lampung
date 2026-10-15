@@ -1,8 +1,31 @@
 {
-  "last_updated": "2026-10-15T11:30:32.801712+00:00",
-  "total_hotspot": 0,
-  "per_kph": {},
-  "per_pbph": {},
-  "per_fungsi_kawasan": {},
-  "per_confidence": {}
+  "last_updated": "2026-10-15T11:45:26.108519+00:00",
+  "total_hotspot": 141,
+  "per_kph": {
+    "Luar KPH": 129,
+    "KPH Way Terusan": 5,
+    "KPHP Bengkulu Utara": 2,
+    "KPH Pesawaran": 1,
+    "KPH Pesisir Barat": 1,
+    "KPHL Kaur": 1,
+    "KPHL Seluma": 1,
+    "KPHL Bukit Daun": 1
+  },
+  "per_pbph": {
+    "Luar PBPH": 140,
+    "PT ANUGERAH PRATAMA INSPIRASI": 1
+  },
+  "per_fungsi_kawasan": {
+    "Areal Penggunaan Lain": 104,
+    "Taman Nasional": 23,
+    "Hutan Produksi Tetap": 5,
+    "Hutan Produksi Terbatas": 4,
+    "Hutan Lindung": 3,
+    "Cagar Alam": 1,
+    "Taman Wisata Alam": 1
+  },
+  "per_confidence": {
+    "medium": 140,
+    "high": 1
+  }
 }
