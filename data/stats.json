@@ -1,8 +1,20 @@
 {
-  "last_updated": "2026-10-17T02:30:30.359403+00:00",
-  "total_hotspot": 0,
-  "per_kph": {},
-  "per_pbph": {},
-  "per_fungsi_kawasan": {},
-  "per_confidence": {}
+  "last_updated": "2026-10-17T02:45:23.678710+00:00",
+  "total_hotspot": 10,
+  "per_kph": {
+    "Luar KPH": 8,
+    "KPHL Kaur": 1,
+    "KPHL Bukit Balai Rejang": 1
+  },
+  "per_pbph": {
+    "Luar PBPH": 10
+  },
+  "per_fungsi_kawasan": {
+    "Areal Penggunaan Lain": 8,
+    "Hutan Produksi Terbatas": 1,
+    "Hutan Lindung": 1
+  },
+  "per_confidence": {
+    "medium": 10
+  }
 }
