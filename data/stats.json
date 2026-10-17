@@ -1,24 +1,27 @@
 {
-  "last_updated": "2026-10-17T13:30:31.609252+00:00",
-  "total_hotspot": 55,
+  "last_updated": "2026-10-17T13:45:26.079677+00:00",
+  "total_hotspot": 136,
   "per_kph": {
-    "Luar KPH": 50,
+    "Luar KPH": 125,
     "KPHL Kaur": 4,
-    "KPHL Bukit Balai Rejang": 1
+    "KPH Way Terusan": 3,
+    "KPHL Bukit Balai Rejang": 3,
+    "KPH Gunung Balak": 1
   },
   "per_pbph": {
-    "Luar PBPH": 55
+    "Luar PBPH": 136
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 32,
-    "Taman Nasional": 10,
-    "Taman Wisata Alam": 5,
-    "Cagar Alam": 3,
-    "Hutan Produksi Terbatas": 3,
-    "Hutan Lindung": 2
+    "Areal Penggunaan Lain": 64,
+    "Taman Nasional": 49,
+    "Taman Wisata Alam": 8,
+    "Hutan Lindung": 5,
+    "Cagar Alam": 4,
+    "Hutan Produksi Tetap": 3,
+    "Hutan Produksi Terbatas": 3
   },
   "per_confidence": {
-    "medium": 54,
+    "medium": 135,
     "high": 1
   }
 }
