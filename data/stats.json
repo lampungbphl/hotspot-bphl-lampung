@@ -1,8 +1,23 @@
 {
-  "last_updated": "2026-10-20T08:15:28.792995+00:00",
-  "total_hotspot": 0,
-  "per_kph": {},
-  "per_pbph": {},
-  "per_fungsi_kawasan": {},
-  "per_confidence": {}
+  "last_updated": "2026-10-20T08:30:34.034865+00:00",
+  "total_hotspot": 52,
+  "per_kph": {
+    "Luar KPH": 49,
+    "KPH Pesisir Barat": 2,
+    "KPH Way Terusan": 1
+  },
+  "per_pbph": {
+    "Luar PBPH": 52
+  },
+  "per_fungsi_kawasan": {
+    "Areal Penggunaan Lain": 43,
+    "Taman Nasional": 4,
+    "Hutan Produksi Terbatas": 2,
+    "Taman Wisata Alam": 2,
+    "Hutan Produksi Tetap": 1
+  },
+  "per_confidence": {
+    "medium": 49,
+    "high": 3
+  }
 }
