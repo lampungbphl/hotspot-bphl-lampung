@@ -1,8 +1,21 @@
 {
-  "last_updated": "2026-10-21T07:45:29.658000+00:00",
-  "total_hotspot": 0,
-  "per_kph": {},
-  "per_pbph": {},
-  "per_fungsi_kawasan": {},
-  "per_confidence": {}
+  "last_updated": "2026-10-21T08:00:36.867614+00:00",
+  "total_hotspot": 82,
+  "per_kph": {
+    "Luar KPH": 81,
+    "KPHL Kaur": 1
+  },
+  "per_pbph": {
+    "Luar PBPH": 82
+  },
+  "per_fungsi_kawasan": {
+    "Areal Penggunaan Lain": 69,
+    "Taman Nasional": 11,
+    "Cagar Alam": 1,
+    "Hutan Produksi Terbatas": 1
+  },
+  "per_confidence": {
+    "medium": 66,
+    "high": 16
+  }
 }
