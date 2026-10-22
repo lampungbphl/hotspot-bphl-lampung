@@ -1,34 +1,35 @@
 {
-  "last_updated": "2026-10-22T09:15:26.878327+00:00",
-  "total_hotspot": 180,
+  "last_updated": "2026-10-22T09:30:32.815675+00:00",
+  "total_hotspot": 234,
   "per_kph": {
-    "Luar KPH": 151,
-    "KPH Bukit Punggur": 9,
+    "Luar KPH": 190,
+    "KPH Bukit Punggur": 12,
     "KPHL Kaur": 7,
+    "KPH Muara Dua": 7,
     "KPH Way Terusan": 5,
-    "KPHL Bukit Daun": 2,
-    "KPHP Bengkulu Utara": 2,
-    "KPH Gunung Balak": 1,
+    "KPHP Bengkulu Utara": 5,
+    "KPHL Bukit Daun": 4,
+    "KPH Gunung Balak": 2,
     "KPHL Bengkulu Selatan": 1,
-    "KPH Pesisir Barat": 1,
-    "KPH Muara Dua": 1
+    "KPH Pesisir Barat": 1
   },
   "per_pbph": {
-    "Luar PBPH": 172,
-    "PT Inhutani Lampung": 6,
-    "PT ANUGERAH PRATAMA INSPIRASI": 1,
-    "PT BUDI LAMPUNG SEJAHTERA": 1
+    "Luar PBPH": 214,
+    "PT Inhutani Lampung": 10,
+    "PT BUDI LAMPUNG SEJAHTERA": 6,
+    "PT ANUGERAH PRATAMA INSPIRASI": 4
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 121,
-    "Taman Nasional": 29,
-    "Hutan Produksi Tetap": 13,
-    "Hutan Produksi Terbatas": 9,
-    "Hutan Lindung": 7,
-    "Cagar Alam": 1
+    "Areal Penggunaan Lain": 153,
+    "Taman Nasional": 33,
+    "Hutan Produksi Tetap": 22,
+    "Hutan Produksi Terbatas": 12,
+    "Hutan Lindung": 10,
+    "Cagar Alam": 3,
+    "Taman Buru": 1
   },
   "per_confidence": {
-    "medium": 176,
-    "high": 4
+    "medium": 229,
+    "high": 5
   }
 }
