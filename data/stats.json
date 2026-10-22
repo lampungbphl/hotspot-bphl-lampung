@@ -1,20 +1,27 @@
 {
-  "last_updated": "2026-10-22T07:45:24.111469+00:00",
-  "total_hotspot": 7,
+  "last_updated": "2026-10-22T08:00:36.262121+00:00",
+  "total_hotspot": 22,
   "per_kph": {
-    "Luar KPH": 5,
+    "Luar KPH": 15,
+    "KPHL Kaur": 3,
+    "KPH Pesisir Barat": 1,
+    "KPH Way Terusan": 1,
     "KPH Bukit Punggur": 1,
     "KPH Muara Dua": 1
   },
   "per_pbph": {
-    "Luar PBPH": 6,
+    "Luar PBPH": 21,
     "PT BUDI LAMPUNG SEJAHTERA": 1
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 5,
-    "Hutan Produksi Tetap": 2
+    "Areal Penggunaan Lain": 13,
+    "Hutan Produksi Terbatas": 3,
+    "Hutan Produksi Tetap": 3,
+    "Taman Nasional": 2,
+    "Hutan Lindung": 1
   },
   "per_confidence": {
-    "medium": 7
+    "medium": 20,
+    "high": 2
   }
 }
