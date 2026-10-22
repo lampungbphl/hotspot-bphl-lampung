@@ -1,27 +1,30 @@
 {
-  "last_updated": "2026-10-22T08:00:36.262121+00:00",
-  "total_hotspot": 22,
+  "last_updated": "2026-10-22T08:15:33.254431+00:00",
+  "total_hotspot": 33,
   "per_kph": {
-    "Luar KPH": 15,
-    "KPHL Kaur": 3,
+    "Luar KPH": 21,
+    "KPHL Kaur": 4,
+    "KPH Bukit Punggur": 2,
+    "KPHP Bengkulu Utara": 2,
     "KPH Pesisir Barat": 1,
     "KPH Way Terusan": 1,
-    "KPH Bukit Punggur": 1,
+    "KPHL Bukit Daun": 1,
     "KPH Muara Dua": 1
   },
   "per_pbph": {
-    "Luar PBPH": 21,
+    "Luar PBPH": 31,
+    "PT ANUGERAH PRATAMA INSPIRASI": 1,
     "PT BUDI LAMPUNG SEJAHTERA": 1
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 13,
-    "Hutan Produksi Terbatas": 3,
-    "Hutan Produksi Tetap": 3,
-    "Taman Nasional": 2,
-    "Hutan Lindung": 1
+    "Areal Penggunaan Lain": 17,
+    "Hutan Produksi Terbatas": 6,
+    "Taman Nasional": 4,
+    "Hutan Lindung": 3,
+    "Hutan Produksi Tetap": 3
   },
   "per_confidence": {
-    "medium": 20,
+    "medium": 31,
     "high": 2
   }
 }
