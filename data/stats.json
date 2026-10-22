@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-10-22T20:15:31.608608+00:00",
-  "total_hotspot": 264,
+  "last_updated": "2026-10-22T20:30:36.172088+00:00",
+  "total_hotspot": 286,
   "per_kph": {
-    "Luar KPH": 220,
+    "Luar KPH": 242,
     "KPH Bukit Punggur": 12,
     "KPHL Kaur": 7,
     "KPH Muara Dua": 7,
@@ -14,13 +14,13 @@
     "KPH Pesisir Barat": 1
   },
   "per_pbph": {
-    "Luar PBPH": 244,
+    "Luar PBPH": 266,
     "PT Inhutani Lampung": 10,
     "PT BUDI LAMPUNG SEJAHTERA": 6,
     "PT ANUGERAH PRATAMA INSPIRASI": 4
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 180,
+    "Areal Penggunaan Lain": 202,
     "Taman Nasional": 33,
     "Hutan Produksi Tetap": 22,
     "Hutan Produksi Terbatas": 12,
@@ -29,7 +29,7 @@
     "Taman Buru": 1
   },
   "per_confidence": {
-    "medium": 258,
+    "medium": 280,
     "high": 6
   }
 }
