@@ -1,20 +1,22 @@
 {
-  "last_updated": "2026-10-24T10:15:25.300141+00:00",
-  "total_hotspot": 100,
+  "last_updated": "2026-10-24T10:25:04.220785+00:00",
+  "total_hotspot": 111,
   "per_kph": {
-    "Luar KPH": 96,
-    "KPH Way Terusan": 4
+    "Luar KPH": 104,
+    "KPH Way Terusan": 5,
+    "KPHP Muko Muko": 2
   },
   "per_pbph": {
-    "Luar PBPH": 100
+    "Luar PBPH": 111
   },
   "per_fungsi_kawasan": {
-    "Taman Nasional": 52,
-    "Areal Penggunaan Lain": 44,
-    "Hutan Produksi Tetap": 4
+    "Taman Nasional": 54,
+    "Areal Penggunaan Lain": 50,
+    "Hutan Produksi Tetap": 5,
+    "Hutan Produksi Terbatas": 2
   },
   "per_confidence": {
-    "medium": 99,
-    "high": 1
+    "medium": 108,
+    "high": 3
   }
 }
