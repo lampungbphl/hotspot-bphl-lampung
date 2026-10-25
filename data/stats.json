@@ -1,23 +1,8 @@
 {
-  "last_updated": "2026-10-24T23:45:25.290051+00:00",
-  "total_hotspot": 181,
-  "per_kph": {
-    "Luar KPH": 173,
-    "KPH Way Terusan": 5,
-    "KPHP Muko Muko": 2,
-    "KPH Bukit Punggur": 1
-  },
-  "per_pbph": {
-    "Luar PBPH": 181
-  },
-  "per_fungsi_kawasan": {
-    "Taman Nasional": 93,
-    "Areal Penggunaan Lain": 80,
-    "Hutan Produksi Tetap": 6,
-    "Hutan Produksi Terbatas": 2
-  },
-  "per_confidence": {
-    "medium": 178,
-    "high": 3
-  }
+  "last_updated": "2026-10-25T00:00:45.870146+00:00",
+  "total_hotspot": 0,
+  "per_kph": {},
+  "per_pbph": {},
+  "per_fungsi_kawasan": {},
+  "per_confidence": {}
 }
