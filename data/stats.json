@@ -1,20 +1,22 @@
 {
-  "last_updated": "2026-10-26T21:00:44.095042+00:00",
-  "total_hotspot": 18,
+  "last_updated": "2026-10-26T21:15:27.635859+00:00",
+  "total_hotspot": 22,
   "per_kph": {
-    "Luar KPH": 15,
+    "Luar KPH": 18,
     "KPHL Kaur": 2,
+    "KPH Bukit Punggur": 1,
     "KPHL Bengkulu Selatan": 1
   },
   "per_pbph": {
-    "Luar PBPH": 18
+    "Luar PBPH": 22
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 15,
+    "Areal Penggunaan Lain": 18,
     "Hutan Lindung": 2,
-    "Hutan Produksi Terbatas": 1
+    "Hutan Produksi Terbatas": 1,
+    "Hutan Produksi Tetap": 1
   },
   "per_confidence": {
-    "medium": 18
+    "medium": 22
   }
 }
