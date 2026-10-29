@@ -1,18 +1,18 @@
 {
-  "last_updated": "2026-10-29T10:15:33.921048+00:00",
-  "total_hotspot": 2,
+  "last_updated": "2026-10-29T10:30:33.507494+00:00",
+  "total_hotspot": 4,
   "per_kph": {
-    "Luar KPH": 1,
+    "Luar KPH": 3,
     "KPH Bukit Punggur": 1
   },
   "per_pbph": {
-    "Luar PBPH": 2
+    "Luar PBPH": 4
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 1,
+    "Areal Penggunaan Lain": 3,
     "Hutan Produksi Tetap": 1
   },
   "per_confidence": {
-    "medium": 2
+    "medium": 4
   }
 }
