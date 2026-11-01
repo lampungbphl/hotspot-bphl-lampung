@@ -1,18 +1,18 @@
 {
-  "last_updated": "2026-11-01T09:30:33.853917+00:00",
-  "total_hotspot": 13,
+  "last_updated": "2026-11-01T09:45:27.106198+00:00",
+  "total_hotspot": 14,
   "per_kph": {
-    "Luar KPH": 9,
+    "Luar KPH": 10,
     "KPH Way Terusan": 4
   },
   "per_pbph": {
-    "Luar PBPH": 13
+    "Luar PBPH": 14
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 9,
+    "Areal Penggunaan Lain": 10,
     "Hutan Produksi Tetap": 4
   },
   "per_confidence": {
-    "medium": 13
+    "medium": 14
   }
 }
