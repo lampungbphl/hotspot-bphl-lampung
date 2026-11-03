@@ -1,22 +1,22 @@
 {
-  "last_updated": "2026-11-03T09:15:26.084262+00:00",
-  "total_hotspot": 18,
+  "last_updated": "2026-11-03T09:30:36.426012+00:00",
+  "total_hotspot": 19,
   "per_kph": {
-    "Luar KPH": 15,
+    "Luar KPH": 16,
     "KPH Batu Tegi": 1,
     "KPHL Kaur": 1,
     "KPH Sungai Buaya": 1
   },
   "per_pbph": {
-    "Luar PBPH": 17,
+    "Luar PBPH": 18,
     "PT Silva Inhutani Lampung": 1
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 15,
+    "Areal Penggunaan Lain": 16,
     "Hutan Produksi Tetap": 2,
     "Hutan Lindung": 1
   },
   "per_confidence": {
-    "medium": 18
+    "medium": 19
   }
 }
