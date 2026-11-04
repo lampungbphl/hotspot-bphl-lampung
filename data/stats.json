@@ -1,17 +1,17 @@
 {
-  "last_updated": "2026-11-04T21:30:45.828680+00:00",
-  "total_hotspot": 20,
+  "last_updated": "2026-11-04T21:45:26.860214+00:00",
+  "total_hotspot": 30,
   "per_kph": {
-    "Luar KPH": 20
+    "Luar KPH": 30
   },
   "per_pbph": {
-    "Luar PBPH": 20
+    "Luar PBPH": 30
   },
   "per_fungsi_kawasan": {
-    "Taman Nasional": 12,
+    "Taman Nasional": 22,
     "Areal Penggunaan Lain": 8
   },
   "per_confidence": {
-    "medium": 20
+    "medium": 30
   }
 }
