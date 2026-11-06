@@ -1,1 +1,1 @@
-{"type": "FeatureCollection", "features": []}
+{"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [105.42374, -6.10479]}, "properties": {"acq_date": "2026-11-06", "acq_time": "138", "satellite": "Terra", "instrument": "MODIS", "confidence": "medium", "frp": "11.11", "daynight": "D", "provinsi": "Lampung", "kph": "Luar KPH", "pbph": "Luar PBPH", "fungsi_kawasan": "Cagar Alam"}}]}
