@@ -1,20 +1,8 @@
 {
-  "last_updated": "2026-11-05T23:56:46.865340+00:00",
-  "total_hotspot": 29,
-  "per_kph": {
-    "Luar KPH": 25,
-    "KPH Way Terusan": 3,
-    "KPH Bukit Punggur": 1
-  },
-  "per_pbph": {
-    "Luar PBPH": 29
-  },
-  "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 22,
-    "Hutan Produksi Tetap": 4,
-    "Taman Nasional": 3
-  },
-  "per_confidence": {
-    "medium": 29
-  }
+  "last_updated": "2026-11-06T00:00:43.512411+00:00",
+  "total_hotspot": 0,
+  "per_kph": {},
+  "per_pbph": {},
+  "per_fungsi_kawasan": {},
+  "per_confidence": {}
 }
