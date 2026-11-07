@@ -1,23 +1,8 @@
 {
-  "last_updated": "2026-11-06T23:30:33.648754+00:00",
-  "total_hotspot": 62,
-  "per_kph": {
-    "Luar KPH": 58,
-    "KPH Way Terusan": 2,
-    "KPH Bukit Punggur": 1,
-    "KPH Muara Dua": 1
-  },
-  "per_pbph": {
-    "Luar PBPH": 60,
-    "PT Inhutani Lampung": 2
-  },
-  "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 56,
-    "Hutan Produksi Tetap": 4,
-    "Cagar Alam": 2
-  },
-  "per_confidence": {
-    "medium": 60,
-    "high": 2
-  }
+  "last_updated": "2026-11-07T00:00:45.316972+00:00",
+  "total_hotspot": 0,
+  "per_kph": {},
+  "per_pbph": {},
+  "per_fungsi_kawasan": {},
+  "per_confidence": {}
 }
