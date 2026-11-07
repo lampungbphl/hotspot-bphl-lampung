@@ -1,8 +1,21 @@
 {
-  "last_updated": "2026-11-07T08:00:40.518433+00:00",
-  "total_hotspot": 0,
-  "per_kph": {},
-  "per_pbph": {},
-  "per_fungsi_kawasan": {},
-  "per_confidence": {}
+  "last_updated": "2026-11-07T08:15:25.914779+00:00",
+  "total_hotspot": 18,
+  "per_kph": {
+    "Luar KPH": 16,
+    "KPH Batu Tegi": 1,
+    "KPH Way Terusan": 1
+  },
+  "per_pbph": {
+    "Luar PBPH": 18
+  },
+  "per_fungsi_kawasan": {
+    "Areal Penggunaan Lain": 16,
+    "Hutan Lindung": 1,
+    "Hutan Produksi Tetap": 1
+  },
+  "per_confidence": {
+    "medium": 17,
+    "high": 1
+  }
 }
