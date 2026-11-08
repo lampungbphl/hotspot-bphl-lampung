@@ -1,25 +1,8 @@
 {
-  "last_updated": "2026-11-07T23:45:25.992074+00:00",
-  "total_hotspot": 67,
-  "per_kph": {
-    "Luar KPH": 60,
-    "KPHL Kaur": 3,
-    "KPH Sungai Buaya": 2,
-    "KPH Batu Tegi": 1,
-    "KPH Way Terusan": 1
-  },
-  "per_pbph": {
-    "Luar PBPH": 65,
-    "PT Silva Inhutani Lampung": 2
-  },
-  "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 60,
-    "Hutan Produksi Tetap": 4,
-    "Hutan Produksi Terbatas": 2,
-    "Hutan Lindung": 1
-  },
-  "per_confidence": {
-    "medium": 62,
-    "high": 5
-  }
+  "last_updated": "2026-11-08T00:00:39.320840+00:00",
+  "total_hotspot": 0,
+  "per_kph": {},
+  "per_pbph": {},
+  "per_fungsi_kawasan": {},
+  "per_confidence": {}
 }
