@@ -1,16 +1,19 @@
 {
-  "last_updated": "2026-11-12T21:15:34.685548+00:00",
-  "total_hotspot": 15,
+  "last_updated": "2026-11-12T21:30:34.213723+00:00",
+  "total_hotspot": 17,
   "per_kph": {
-    "Luar KPH": 15
+    "Luar KPH": 16,
+    "KPH Muara Dua": 1
   },
   "per_pbph": {
-    "Luar PBPH": 15
+    "Luar PBPH": 16,
+    "PT Inhutani Lampung": 1
   },
   "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 15
+    "Areal Penggunaan Lain": 16,
+    "Hutan Produksi Tetap": 1
   },
   "per_confidence": {
-    "medium": 15
+    "medium": 17
   }
 }
