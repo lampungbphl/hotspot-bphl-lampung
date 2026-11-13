@@ -1,1 +1,1 @@
-{"type": "FeatureCollection", "features": []}
+{"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [104.91609, -4.90848]}, "properties": {"acq_date": "2026-11-13", "acq_time": "559", "satellite": "N21", "instrument": "VIIRS", "confidence": "medium", "frp": "9.97", "daynight": "D", "provinsi": "Lampung", "kph": "Luar KPH", "pbph": "Luar PBPH", "fungsi_kawasan": "Areal Penggunaan Lain"}}]}
