@@ -1,16 +1,8 @@
 {
-  "last_updated": "2026-11-16T23:51:17.508800+00:00",
-  "total_hotspot": 7,
-  "per_kph": {
-    "Luar KPH": 7
-  },
-  "per_pbph": {
-    "Luar PBPH": 7
-  },
-  "per_fungsi_kawasan": {
-    "Areal Penggunaan Lain": 7
-  },
-  "per_confidence": {
-    "medium": 7
-  }
+  "last_updated": "2026-11-17T00:00:47.334149+00:00",
+  "total_hotspot": 0,
+  "per_kph": {},
+  "per_pbph": {},
+  "per_fungsi_kawasan": {},
+  "per_confidence": {}
 }
